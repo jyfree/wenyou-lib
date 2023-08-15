@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <com.wenyou.yuilibrary.widget.textview.CountDownTextView
+        android:id="@+id/cdTV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="倒计时"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:cdt_countDown="100000"
+        app:cdt_countDownFormat="倒计时%ds"
+        app:cdt_countDownInterval="1000" />
+
+    <com.wenyou.yuilibrary.widget.button.CountDownButton
+        android:id="@+id/cdBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="倒计时"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</LinearLayout>

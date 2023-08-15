@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wenyou.simpledemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:name="debug.DemoSimpleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.PermissionSimpleActivity" />
+        <activity android:name=".ui.BarSimpleActivity" />
+        <activity android:name=".ui.PicSimpleActivity" />
+        <activity android:name=".ui.TimerSimpleActivity" />
+        <activity android:name=".ui.SpSimpleActivity" />
+
+        <activity android:name=".ui.social.common.LoginSimpleCommonActivity" />
+        <activity android:name=".ui.social.common.PaySimpleCommonActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="${WX_VALUE}" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.social.common.ShareSimpleCommonActivity" />
+        <activity android:name=".ui.social.LoginSimpleActivity" />
+        <activity android:name=".ui.social.PaySimpleActivity" />
+        <activity android:name=".ui.social.ShareSimpleActivity" />
+        <activity android:name=".ui.http.ApiSimpleActivity" />
+        <activity android:name=".ui.http.ApiRxJavaSimpleActivity" />
+        <activity android:name=".ui.sharedata.LazySimpleActivity" />
+        <activity android:name=".ui.SupplySimpleActivity" />
+        <activity android:name=".ui.WXH5PaySimpleActivity" />
+
+
+        <!--***************************微信支付&登录*************************-->
+        <activity
+            android:name="com.wenyou.simpledemo.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.wenyou.simpledemo.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/simple_translucent" />
+        <!--***************************微信支付&登录 end*************************-->
+
+        <!--***************************访问文件*************************-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${package_name}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+    </application>
+
+</manifest>

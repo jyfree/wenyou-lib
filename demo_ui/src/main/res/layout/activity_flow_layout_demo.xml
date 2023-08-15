@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_flowTagLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FlowTagLayout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_flowLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FlowLayout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_flexBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FlexBoxLayoutManager + RecyclerView"
+        android:textAllCaps="false" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

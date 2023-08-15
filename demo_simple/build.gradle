@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    productFlavors {
+        module {
+            applicationId "com.wenyou.simpledemo"
+        }
+    }
+
+    productFlavors.all {
+        //公共manifest配置
+        def tencentValue = rootProject.ext.qqAppID(applicationId)
+        def wxValue = rootProject.ext.wxAppID(applicationId)
+        def wbValue = rootProject.ext.wbAppID(applicationId)
+
+        manifestPlaceholders = [
+                package_name : applicationId,
+                TENCENT_VALUE: tencentValue,
+                WX_VALUE     : wxValue,
+                WB_VALUE     : wbValue
+        ]
+        buildConfigField 'String', 'TENCENT_VALUE', "\"${tencentValue}\""
+        buildConfigField 'String', 'WX_VALUE', "\"${wxValue}\""
+        buildConfigField 'String', 'WB_VALUE', "\"${wbValue}\""
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    //启动viewBinding
+    viewBinding {
+        enabled = true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies.kotlin_stdlib_jdk7
+    implementation rootProject.ext.dependencies.androidx_core_ktx
+    implementation rootProject.ext.dependencies.androidx_constraintlayout
+    implementation rootProject.ext.dependencies.androidx_appcompat
+    implementation rootProject.ext.dependencies.google_design
+
+    implementation project(':lib_base')//基础库
+    implementation project(':lib_social')//社会化库
+    implementation project(':lib_yui')//UI库
+    implementation project(':lib_http_rxjava')//http_rxJava库
+    implementation project(':lib_http_coroutines')//http_coroutines库
+    implementation project(':lib_web')//web库
+    implementation project(':lib_loadsir')//菊花库
+
+    implementation rootProject.ext.dependencies.multidex
+
+    //glide
+    implementation(rootProject.ext.dependencies.glide) {
+        exclude group: "com.android.support"
+    }
+
+
+    //viewModel扩展
+//    implementation rootProject.ext.dependencies.lifecycle_viewmodel_ktx
+//    implementation "androidx.activity:activity-ktx:1.2.4"
+//    implementation "androidx.fragment:fragment-ktx:1.2.4"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

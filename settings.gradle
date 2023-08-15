@@ -1,0 +1,12 @@
+rootProject.name = "wenyou-lib"
+include ':app'
+include ':demo_simple'
+include ':demo_ui'
+include ':lib_loadsir'
+include ':lib_supply'
+include ':lib_web'
+include ':lib_social'
+include ':lib_base'
+include ':lib_yui'
+include ':lib_http_rxjava'
+include ':lib_http_coroutines'

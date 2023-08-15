@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.wenyou.yuilibrary.widget.verify.VerifyCodeEditText
+        android:id="@+id/vci_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        app:vci_is_pwd="true"
+        app:vci_number="6"
+        app:vci_pwd_radius="10dp"
+        app:vci_text_color="#000000"
+        app:vci_width="50dp" />
+
+    <com.wenyou.yuilibrary.widget.verify.VerifyCodeEditText
+        android:id="@+id/vci_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vci_number="5" />
+
+    <com.wenyou.yuilibrary.widget.verify.VerifyCodeEditText
+        android:id="@+id/vci_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vci_is_pwd="true" />
+
+    <com.wenyou.yuilibrary.widget.verify.VerifyCodeEditText
+        android:id="@+id/vci_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vci_bg_focus="@drawable/demo_custom_vci_shape_bg_focus"
+        app:vci_bg_normal="@drawable/demo_custom_vci_shape_bg_normal"
+        app:vci_is_pwd="false"
+        app:vci_number="4"
+        app:vci_text_color="#223B53"
+        app:vci_text_size="16sp"
+        app:vci_width="45dp" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="清空" />
+
+
+</LinearLayout>

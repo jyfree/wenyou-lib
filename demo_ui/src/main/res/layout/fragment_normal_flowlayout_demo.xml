@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="流布局：" />
+
+    <com.wenyou.yuilibrary.widget.flowlayout.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="2"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="3"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="4"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+    </com.wenyou.yuilibrary.widget.flowlayout.FlowLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="弹性布局：" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap">
+
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="2"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="3"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:background="@drawable/yui_default_flow_tag_bg_rect_round"
+            android:text="4"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="30dp"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</LinearLayout>
+

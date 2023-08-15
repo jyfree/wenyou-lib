@@ -1,0 +1,17 @@
+ext {
+
+    //qq appId配置
+    qqAppID = { packageName ->
+        return "101975858"
+    }
+
+    //微信 appId配置
+    wxAppID = { packageName ->
+        return "wx123"
+    }
+
+    //微博 appId配置
+    wbAppID = { packageName ->
+        return "3121156208"
+    }
+}

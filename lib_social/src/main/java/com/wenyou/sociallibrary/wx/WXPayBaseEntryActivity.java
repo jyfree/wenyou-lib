@@ -1,0 +1,77 @@
+package com.wenyou.sociallibrary.wx;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.wenyou.sociallibrary.SDKConfig;
+import com.wenyou.sociallibrary.utils.SDKLogUtils;
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
+import com.tencent.mm.opensdk.modelbase.BaseReq;
+import com.tencent.mm.opensdk.modelbase.BaseResp;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
+/**
+ * @description
+ * @date: 2021/12/16 14:08
+ * @author: jy
+ */
+public abstract class WXPayBaseEntryActivity extends AppCompatActivity implements IWXAPIEventHandler {
+
+
+    private IWXAPI api;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        api = WXAPIFactory.createWXAPI(this, SDKConfig.getWx_appID());
+        api.handleIntent(getIntent(), this);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        api.handleIntent(intent, this);
+    }
+
+    @Override
+    public void onReq(BaseReq req) {
+        SDKLogUtils.i("微信支付授权--onReq--openId", req.openId);
+        finish();
+    }
+
+
+    @Override
+    public void onResp(BaseResp resp) {
+        SDKLogUtils.i("微信支付授权--onResp，errCode:", resp.errCode, "openid：", resp.openId, "type:", resp.getType());
+
+        //支付成功
+        if (resp.getType() == ConstantsAPI.COMMAND_PAY_BY_WX) {
+
+            switch (resp.errCode) {
+                case 0:
+                    paySucceed();
+                    break;
+                case -2:
+                    payCancel();
+                    break;
+                default:
+                    payFail(resp.errCode);
+                    break;
+            }
+        }
+        finish();
+    }
+
+    public abstract void paySucceed();
+
+    public abstract void payCancel();
+
+    public abstract void payFail(int errCode);
+
+}

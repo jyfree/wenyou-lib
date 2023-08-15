@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <com.wenyou.yuilibrary.widget.alpha.YUIAlphaShapeTextView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="6dp"
+        android:text="@string/yui_jump"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:stv_backgroundColor="#4D000000"
+        app:stv_cornerRadius="20dp" />
+
+    <com.wenyou.yuilibrary.widget.alpha.YUIAlphaShapeTextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/yui_try_immediately"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:stv_backgroundColor="@android:color/transparent"
+        app:stv_cornerRadius="20dp"
+        app:stv_strokeColor="#FFFFFF"
+        app:stv_strokeWidth="1dp" />
+
+</FrameLayout>

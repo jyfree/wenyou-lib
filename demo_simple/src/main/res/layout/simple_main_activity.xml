@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="框架示例"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/go_api"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="接口请求(协程)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/go_api_rx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="接口请求(RxJava)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/go_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="bar主题示例"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/go_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="分享示例(接口方式)" />
+
+        <Button
+            android:id="@+id/go_shareCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="分享示例(继承父类方式)" />
+
+        <Button
+            android:id="@+id/go_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="登录示例(接口方式)" />
+
+        <Button
+            android:id="@+id/go_loginCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="登录示例(继承父类方式)" />
+
+        <Button
+            android:id="@+id/go_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="支付示例(接口方式)" />
+
+        <Button
+            android:id="@+id/go_payCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="支付示例(继承父类方式)" />
+
+        <Button
+            android:id="@+id/go_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="倒计时示例" />
+
+        <Button
+            android:id="@+id/go_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="权限申请示例" />
+
+        <Button
+            android:id="@+id/go_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="SP示例" />
+
+        <Button
+            android:id="@+id/go_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="拍照和图库示例" />
+
+
+        <Button
+            android:id="@+id/go_lazy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="viewModel数据共享(懒加载示例)"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/go_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="上传下载服务"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/go_wxH5Pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="go2Act"
+            android:text="微信H5支付"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</ScrollView>

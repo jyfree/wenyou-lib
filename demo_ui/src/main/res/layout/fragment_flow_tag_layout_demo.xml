@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="默认点击：" />
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:id="@+id/flowLayout_normal_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="单选(不可取消)：" />
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:id="@+id/flowLayout_single_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="单选(可点击取消)：" />
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:id="@+id/flowLayout_single_select_cancelable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ftl_single_cancelable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="多选：" />
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:id="@+id/flowLayout_multi_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="多选(xml配置)：" />
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ftl_check_mode="multi"
+                app:ftl_entries="@array/tags_values"
+                app:ftl_selected="@array/tags_selects_values" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签展示：" />
+
+                <Button
+                    android:id="@+id/btn_add_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="添加标签" />
+
+                <Button
+                    android:id="@+id/btn_clear_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="清除标签" />
+
+            </LinearLayout>
+
+
+            <com.wenyou.yuilibrary.widget.flowlayout.FlowTagLayout
+                android:id="@+id/flowLayout_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ftl_check_mode="display"
+                app:ftl_entries="@array/tags_values" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

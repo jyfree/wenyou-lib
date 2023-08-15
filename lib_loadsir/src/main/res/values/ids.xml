@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="loadSir_view_animate" type="id" />
+    <item name="loadSir_empty_image" type="id" />
+    <item name="loadSir_empty_content" type="id" />
+    <item name="loadSir_empty_hint" type="id" />
+    <item name="loadSir_error_image" type="id" />
+    <item name="loadSir_error_content" type="id" />
+    <item name="loadSir_error_hint" type="id" />
+</resources>

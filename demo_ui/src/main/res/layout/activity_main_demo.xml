@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSelectorSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="Selector示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnShapeTVSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="ShapeTV示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnTouchIVSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="TouchIV示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnBannerSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="Banner示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnAlphaViewSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="AlphaView示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnCountDownViewSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="CountDown示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnShadowSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="Shadow示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnGoodViewSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="GoodView示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnVerifyCodeSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="VerifyCode示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnFlowLayoutSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="弹性布局示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnTitleBarSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnClick"
+                android:text="标题导航示例"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,81 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            minSdkVersion    : 17,
+            targetSdkVersion : 30,
+            buildToolsVersion: "30.0.3",
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    dependencies = [
+            kotlin_stdlib_jdk7        : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlinx_coroutines_core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.1",
+            kotlinx_coroutines_android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.1",
+            //social
+            wechat                    : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+            weibo                     : "io.github.sinaweibosdk:core:12.5.0@aar",
+            //androidX
+            androidx_appcompat        : "androidx.appcompat:appcompat:1.2.0",
+            androidx_core_ktx         : "androidx.core:core-ktx:1.3.1",
+            androidx_constraintlayout : "androidx.constraintlayout:constraintlayout:1.1.3",
+            lifecycle_viewmodel_ktx   : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0",
+            lifecycle_runtime_ktx     : "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0",
+            //autodispose
+            autodispose               : "com.uber.autodispose2:autodispose-android:2.0.0",
+            autodispose_androidx      : "com.uber.autodispose2:autodispose-androidx-lifecycle:2.0.0",
+            //RxJava
+            rxjava                    : "io.reactivex.rxjava3:rxjava:3.0.4",
+            rxandroid                 : "io.reactivex.rxjava3:rxandroid:3.0.0",
+            //retrofit
+            retrofit_base             : "com.squareup.retrofit2:retrofit:2.9.0",
+            retrofit_converter_gson   : "com.squareup.retrofit2:converter-gson:2.9.0",
+            retrofit_adapter          : "com.squareup.retrofit2:adapter-rxjava3:2.9.0",
+            //gson(版本与retrofit的gson一致)
+            gson                      : "com.google.code.gson:gson:2.8.5",
+            //okHttp
+            okhttp                    : "com.squareup.okhttp3:okhttp:4.2.0",
+            //glide
+            glide                     : "com.github.bumptech.glide:glide:4.9.0",
+            //multidex
+            multidex                  : "com.android.support:multidex:1.0.3",
+            //aspectj
+            aspectj                   : "org.aspectj:aspectjrt:1.9.5",
+            //blankj混淆
+            blankj_free_proguard      : "com.blankj:free-proguard:1.0.2",
+            //google弹性布局
+            flexbox                   : "com.google.android:flexbox:0.3.1",
+            //WMRouter
+            wmrouter_api              : "io.github.meituan-dianping:router:1.2.1",
+            wmrouter_compiler         : "io.github.meituan-dianping:compiler:1.2.1",
+            //BaseQuickAdapter库
+            base_quick_adapter        : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+            //SwipeRefreshLayout
+            swipe_refresh_layout      : "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+            //图片预览库
+            photo_viewer              : "com.github.wanglu1209:PhotoViewer:0.50",
+            //可伸缩textView
+            expandable_text_view      : "com.github.MZCretin:ExpandableTextView:v1.6.1-x",
+            //多图选择器
+            easy_photos               : "com.github.HuanTanSheng:EasyPhotos:3.1.4",
+            //google的design
+            google_design             : "com.google.android.material:material:1.0.0",
+            //视频缓存
+            videocache                : "com.danikula:videocache:2.7.1",
+            //ip归属地
+            ip2region                 : "org.lionsoul:ip2region:2.7.0",
+            //局域网工具：端口扫描、子网设备查找、Ping、唤醒局域网(https://github.com/stealthcopter/AndroidNetworkTools)
+            networkTools              : "com.github.stealthcopter:AndroidNetworkTools:0.4.5.3",
+            //room
+            room_runtime              : "androidx.room:room-runtime:2.2.6",
+            room_compiler             : "androidx.room:room-compiler:2.2.6",
+            //穿山甲广告
+            pangle_ad                 : "com.pangle.cn:ads-sdk-pro:5.3.0.5",
+            //Google广告
+            google_ad                 : "com.google.android.gms:play-services-ads:19.6.0",
+            //图表
+            MPAndroidChart            : "com.github.PhilJay:MPAndroidChart:v3.1.0"
+
+
+    ]
+}

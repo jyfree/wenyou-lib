@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- alpha系列的自定义view配置 （可选配置）-->
+        <item name="yui_switch_alpha_pressed">true</item>
+        <item name="yui_switch_alpha_disabled">true</item>
+        <item name="yui_alpha_pressed">0.1</item>
+        <item name="yui_alpha_disabled">0.1</item>
+        <!-- alpha系列的自定义view配置  end-->
+
+    </style>
+
+</resources>

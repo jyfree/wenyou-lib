@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--alpha系列自定义view配置-->
+    <attr name="yui_switch_alpha_pressed" format="boolean" /><!--设置是否要在 press 时改变透明度-->
+    <attr name="yui_switch_alpha_disabled" format="boolean" /><!--设置是否要在 disabled 时改变透明度-->
+    <attr name="yui_alpha_pressed" format="float" /><!-- press 时透明度-->
+    <attr name="yui_alpha_disabled" format="float" /><!-- disabled 时透明度-->
+    <!--alpha系列自定义view配置  end-->
+
+</resources>

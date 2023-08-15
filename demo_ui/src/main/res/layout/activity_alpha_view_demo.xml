@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wenyou.yuilibrary.widget.alpha.YUIAlphaLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008C96"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <com.wenyou.yuilibrary.widget.alpha.YUIAlphaImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/demo_icon_down" />
+
+        <com.wenyou.yuilibrary.widget.alpha.YUIAlphaButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="点击确认" />
+
+        <com.wenyou.yuilibrary.widget.alpha.YUIAlphaButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="#ff0000"
+            android:enabled="false"
+            android:text="unEnabled"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false" />
+    </com.wenyou.yuilibrary.widget.alpha.YUIAlphaLinearLayout>
+
+    <com.wenyou.yuilibrary.widget.alpha.YUIAlphaFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="30dp">
+
+        <com.wenyou.yuilibrary.widget.alpha.YUIAlphaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="点击确认"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </com.wenyou.yuilibrary.widget.alpha.YUIAlphaFrameLayout>
+
+    <com.wenyou.yuilibrary.widget.alpha.YUIAlphaRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="100dp" />
+
+
+</LinearLayout>

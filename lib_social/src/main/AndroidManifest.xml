@@ -1,0 +1,80 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wenyou.sociallibrary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--适配android 11无法唤起第三方apk-->
+    <queries>
+        <!-- 微信支付SDK -->
+        <package android:name="com.tencent.mm" />
+        <!-- 支付宝支付SDK -->
+        <package android:name="com.eg.android.AlipayGphone" />
+        <!-- 微博 -->
+        <package android:name="com.sina.weibo" />
+        <!-- QQ -->
+        <package android:name="com.tencent.mobileqq" />
+    </queries>
+
+    <application>
+
+        <!--**************二次封装透明activity（接口的实现方式需要注册）**************************-->
+
+        <activity
+            android:name="com.wenyou.sociallibrary.ext.login.SDKLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/social_Theme_Transparent" />
+
+        <activity
+            android:name="com.wenyou.sociallibrary.ext.pay.SDKPayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/social_Theme_Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="${WX_VALUE}" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.wenyou.sociallibrary.ext.share.SDKShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/social_Theme_Transparent" />
+
+        <!--*****************************二次封装透明activity end******************************-->
+
+        <!--***************************微信*************************-->
+        <receiver
+            android:name="com.wenyou.sociallibrary.wx.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!--***************************微信 end*************************-->
+
+        <!--***************************QQ*************************-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent${TENCENT_VALUE}" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--***************************QQ end*************************-->
+
+    </application>
+</manifest>
