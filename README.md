@@ -3,8 +3,8 @@
 各个module的作用，如下：  
 
 # lib_base
-1、基础activity和fragmentbase类  
-2、以channel方式修改主题或ChannelParams来实现渠道或包名分发  
+1、基础Activity和Fragment的base类  
+2、以Channel方式修改主题、ChannelParams来实现渠道或包名分发  
 3、封装权限申请acp、相册和摄像头pic  
 4、解决LiveData粘性事件、封装状态机StatefulLiveData  
 
