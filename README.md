@@ -1,5 +1,5 @@
 # wenyou-lib
-封装Android开发常用库
+封装Android开发常用库  
 各个module的作用，如下：  
 
 # lib_base
